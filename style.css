@@ -24,13 +24,17 @@ body, li {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
+  padding: 8px;
 }
 
 img {
   padding: 12px;
   width: 50px;
   height: 50px;
+}
+
+#btn-mobile {
+  display: none;
 }
 
 .menu {
@@ -55,6 +59,7 @@ img {
   margin: 8px;
   padding: 4px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 article {
@@ -75,8 +80,8 @@ h1 {
 
 .grid {
   display: grid;
-  min-width: 300px;
-  max-width: 100vw;
+  /* min-width: 300px; */
+  max-width: 100%;
   margin: auto;
   margin-bottom: 20px;
   padding: 18px;
@@ -91,14 +96,15 @@ section {
 }
 
 section h2 {
-  font: 700 36px 'Playfair Display SC', serif;
+  font: 700 60px 'Playfair Display SC', serif;
   text-transform: uppercase;
-  margin: 24px;
-  padding: 48px;
+  margin: 18px;
+  padding: 42px;
 }
 
 section p {
   line-height: 1.4em;
+  text-align: justify;
   margin: 12px;
   padding: 18px;
 }
@@ -120,6 +126,28 @@ section p {
   background-color: var(--cor1);
 }
 
+.links {
+  display: flex;
+  margin: 12px;
+}
+
+#cursos a {
+  font: 600 12px 'Playfair Display SC', serif;
+  text-decoration: none;
+  background-color: var(--cor4);
+  color: var(--cor1);
+  margin: 16px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.cursos p {
+  line-height: 1.4em;
+  text-align: left;
+  margin: 12px;
+  padding: 18px;
+}
+
 #faq {
   color: white;
   background-color: var(--cor4);
@@ -136,12 +164,12 @@ section p {
 }
 
 .accordion dt::after {
-  content: '⮟';
+  content: '⮝';
   margin-left: 8px;
 }
 
 .accordion dt.ativo::after {
-  content: '⮝';
+  content: '⮟';
 }
 
 .accordion dd.ativo {
@@ -174,7 +202,7 @@ dt::before {
 }
 
 .contato h2 {
-  font-size: 32px;
+  font-size: 40px;
   text-align: center;
   padding-top: 8px;
   padding-bottom: 4px;
@@ -214,5 +242,24 @@ footer {
   to {
     opacity: 1;
     max-height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  #btn-mobile {
+    display: block;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #nav.active #menu {
+    display: flex;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1;
   }
 }
