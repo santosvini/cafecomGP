@@ -9,11 +9,11 @@
 </head>
 <body>
   <header class="header">
-    <img src="./img/Cafe_com_GP.jpg" alt="Café com Gerente de Projetos">
+    <a href="#home"><img src="./img/Cafe_com_GP.jpg" alt="Café com Gerente de Projetos"></a>
     <nav id="nav">
-    <button id="btn-mobile">Menu</button>
-      <ul class="menu js-menu" id="menu">
-        <li><a href="#home">Home</a></li>
+    <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu<span id="hamburger"></span>
+    </button>
+      <ul class="menu js-menu" id="menu" role="menu">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#cursos">Cursos</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -36,6 +36,7 @@
 
     <section class="sobre" id="sobre">
       <h2>Sobre</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla beatae quos delectus veniam inventore, consequatur similique odit iure libero rem modi dicta nam perspiciatis velit eveniet amet corrupti quasi consequuntur!</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla beatae quos delectus veniam inventore, consequatur similique odit iure libero rem modi dicta nam perspiciatis velit eveniet amet corrupti quasi consequuntur!</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla beatae quos delectus veniam inventore, consequatur similique odit iure libero rem modi dicta nam perspiciatis velit eveniet amet corrupti quasi consequuntur!</p>
     </section>
@@ -78,7 +79,7 @@
     </main>
 
     <footer class="copy">
-      <p>&copy All Rights Reserveds.</p>
+      <p>&copy All Rights Reserveds - VIUS.dev</p>
     </footer>
 
     <script src="script.js"></script>

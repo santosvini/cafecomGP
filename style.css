@@ -14,8 +14,9 @@ body, li {
   font-family: 'Poppins', cursive;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   list-style: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .header {
@@ -24,10 +25,10 @@ body, li {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
 }
 
 img {
+  margin-left: 12px;
   padding: 12px;
   width: 50px;
   height: 50px;
@@ -41,23 +42,22 @@ img {
   display: flex;
 }
 
-.menu li {
-  margin-left: 4px;
-}
+/* .menu li {
+  margin: 0;
+} */
 
 .menu li a {
   display: block;
-  padding: 12px;
+  margin: 12px;
+  padding: 8px;
   color: var(--cor0);
-  font-weight: 500;
+  font-weight: 300;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .menu li a:hover {
-  background-color: #A68B03;
-  margin: 8px;
-  padding: 4px;
+  background-color: #333333;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -80,12 +80,13 @@ h1 {
 
 .grid {
   display: grid;
-  /* min-width: 300px; */
+  /* min-width: 500px; */
   max-width: 100%;
   margin: auto;
   margin-bottom: 20px;
   padding: 18px;
   border-radius: 4px;
+  /* overflow-x: hidden; */
 }
 
 section {
@@ -104,7 +105,7 @@ section h2 {
 
 section p {
   line-height: 1.4em;
-  text-align: justify;
+  text-align: start;
   margin: 12px;
   padding: 18px;
 }
@@ -142,8 +143,7 @@ section p {
 }
 
 .cursos p {
-  line-height: 1.4em;
-  text-align: left;
+  line-height: 1.5em;
   margin: 12px;
   padding: 18px;
 }
@@ -245,21 +245,113 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
-  #btn-mobile {
-    display: block;
-  }
-
+@media (min-width: 360px) and (max-width: 768px){
   #menu {
-    display: none;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    right: 0;
+    background: #0D0D0D;
+    height: 0;
+    z-index: 1000;
+    transition: .6s;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1.5rem;
+    font: 600 16px 'Playfair Display SC', serif;
+    border-bottom: 2px solid ;
   }
 
   #nav.active #menu {
+    height: calc(76vh - 60px);
+    visibility: visible;
+    overflow-y: auto;
+    border-radius: 4px;
+  }
+
+  #btn-mobile {
     display: flex;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #F2CB05;
+    gap: .5rem;
+  }
+
+  #hamburger {
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+  }
+
+  #hamburger::after, #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px
   }
 
   section {
-    display: grid;
-    grid-template-columns: 1;
+    display: grid;   
+  }
+
+  section h2 {
+    font: 400 48px 'Playfair Display SC', serif;
+    text-align: center;
+    text-transform: unset;
+    padding: 12px;
+  }
+
+  .cursos p {
+    padding-top: 4px;
+  }
+
+  .links {
+    justify-content: center;
+    margin: auto;
+  }
+
+  .faq-lista {
+    text-align: start;
+    margin-right: 14px;
+  }
+
+  .contato h2 {
+    font: 300 36px 'Playfair Display SC', serif;
+  }
+
+  .dados li {
+    text-align: start;
+    padding-right: 8px;
+    margin-right: 68px;
+  }
+
+  .copy {
+    font-weight: bolder;
+    margin-bottom: 0px;
   }
 }
