@@ -58,6 +58,28 @@ function menuShow() {
   btnMobile.addEventListener("touchstart", toggleMenu);
 }
 
+function animateScrooll() {
+  const section = document.querySelectorAll(".section")
+  if (section.length > 0) {
+    const windowMetade = window.innerHeight * 0.6
+
+    function animaScrooll() {
+      section.forEach((section) => {
+        const top = section.getBoundingClientRect().top
+        const sectionVisible = (top - windowMetade) < 0
+        if (sectionVisible) 
+        section.classList.add('visible')
+        else
+        section.classList.remove('visible')
+      })
+    }
+    animaScrooll()
+
+    window.addEventListener('scroll', animaScrooll)
+  }
+}
+
 scrollSuave();
 accordion();
 menuShow();
+animateScrooll()
