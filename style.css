@@ -29,20 +29,13 @@ body {
 
 .header {
   background-color: var(--cor4);
+  border-width: 4px;
+  border-style: solid;
+  border-color: #2E201C;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-}
-
-.header p {
-  display: flex;
-  color: #CCC;
-  margin-right: 660px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 img {
@@ -59,10 +52,6 @@ img {
 .menu {
   display: flex;
 }
-
-/* .menu li {
-  margin: 0;
-} */
 
 .menu li a {
   display: block;
@@ -99,16 +88,6 @@ h1 {
   padding: 18px;
 }
 
-/* h1::after {
-  content: '';
-  position: absolute;
-  right: 540px;
-  display: block;
-  width: 20%;
-  height: 2%;
-  border-bottom: 1px solid var(--cor4);
-} */
-
 .grid {
   display: grid;
   /* min-width: 500px; */
@@ -122,6 +101,9 @@ h1 {
 section {
   display: flex;
   align-items: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #2E201C;
   border-radius: 8px;
   margin-top: 12px;
 }
@@ -130,7 +112,7 @@ section h2 {
   font: 700 60px 'Playfair Display SC', serif;
   text-transform: uppercase;
   margin: 18px;
-  padding: 42px;
+  padding: 22px;
 }
 
 section p {
@@ -140,23 +122,15 @@ section p {
   padding: 28px;
 }
 
-/* #home {
-  flex-direction: row-reverse;
-  color: var(--cor4);
-  background-color: var(--cor1);
-} */
-
 #sobre {
   color: white;
   background-color: var(--cor4);
-  /* height: 600px; */
 }
 
 #cursos {
   flex-direction: row-reverse;
   color: var(--cor4);
   background-color: var(--cor1);
-  /* height: 600px; */
 }
 
 .links {
@@ -213,7 +187,7 @@ dd {
   color: gray;
   margin-bottom: .5rem;
   margin-top: .5rem;
-  margin-left: 48px;
+  margin-left: .5rem;
 }
 
 dt::before {
@@ -225,10 +199,16 @@ dt::before {
   background-color: #F2CB05;
 }
 
+#time {
+  flex-direction: row-reverse;
+  color: var(--cor4);
+  background-color: var(--cor1);
+}
+
 .section {
   opacity: 0;
-  transform: translate3d(36px, 0, 0);
-  transition: .9s;
+  transform: translate3d(-36px, 0, 0);
+  transition: .6s;
 }
 
 .section.visible {
@@ -237,35 +217,47 @@ dt::before {
 }
 
 #contato {
-  background-color: var(--cor1);
+  display: inline-block;
+  color: white;
+  background-color: var(--cor4);
 }
 
 .contato {
   display: block;
-  height: 300px;
+  height: 340px;
+  margin-bottom: 8px;
 }
 
 .contato h2 {
-  font-size: 40px;
+  font-size: 32px;
   text-align: center;
-  padding-top: 8px;
-  padding-bottom: 4px;
+  padding-top: 12px;
+}
+
+.contato div {
+  margin-right: 14px;
+  padding-right: 12px;
 }
 
 .dados li {
   text-align: right;
   line-height: 1.4em;
-  margin: 8px;
-  padding: 8px;
+  margin-right: 24px;
+  padding-top: 22px;
 }
 
-.dados li::before {
+/* .dados li::before {
   content: '';
   display: inline-block;
   width: 10px;
   height: 6px;
   margin-right: 8px;
   background-color: gray;
+} */
+
+.dados i {
+  color: #2E201C;
+  margin-right: 4px;
 }
 
 footer {
@@ -303,7 +295,7 @@ footer {
   }
   to {
     opacity: 1;
-    max-height: 200px;
+    max-height: 300px;
   }
 }
 
@@ -327,13 +319,6 @@ footer {
     margin: 0 1.5rem;
     font: 600 14px 'Playfair Display SC', serif;
     border-bottom: 2px solid ;
-  }
-
-  .header p {
-    position: absolute;
-    left: 90px;
-    margin: 6px;
-    align-items: center;
   }
 
   #nav.active #menu {
@@ -387,11 +372,12 @@ footer {
   .grid{
     min-width: 280px;
     margin: 12px;
+    padding: 4px;
   }
 
   section {
     display: grid;
-    padding: 24px;
+    padding: 12px;
     margin-top: 12px;
   }
 
@@ -414,7 +400,7 @@ footer {
   .faq-lista {
     text-align: start;
     margin-right: 24px;
-    padding: 24px;
+    padding: 36px;
   }
 
   .contato h2 {

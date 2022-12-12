@@ -5,13 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css>
   <title>Café com Gerente de Projeto</title>
 </head>
 <body>
   <header class="header js-menu"> 
-    <a href="#home"><img src="./img/Cafe_com_GP.jpg" alt="Café com PMO">
-    </a>
-    <p>Café com GP</p>
+    <img src="./img/Cafe_com_GP.jpg" alt="Café com Gerente de Projeto">
     <nav id="nav">
     <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
     <span id="hamburger"></span>
@@ -20,13 +19,15 @@
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#cursos">Cursos</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="#time">Nosso Time</a></li>
         <li><a href="#contato">Contato</a></li>  
       </ul>
     </nav>
   </header>
 
   <article id="home">
-    <h1>CAFÉ COM GERENTE DE PROJETOS</h1>
+    <h1><i class="fa-solid fa-mug-hot"></i>
+    CAFÉ COM GERENTE DE PROJETOS</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aliquam expedita amet mollitia? Ipsam labore, perspiciatis fugit itaque distinctio provident rerum porro omnis sed repudiandae quod cum praesentium quos blanditiis.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aliquam expedita amet mollitia? Ipsam labore, perspiciatis fugit itaque distinctio provident rerum porro omnis sed repudiandae quod cum praesentium quos blanditiis.</p>
   </article>
@@ -69,14 +70,35 @@
         <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
       </dl>
     </section>
+
+    <section class="time section" id="time">
+      <h2>Nosso Time</h2>
+    </section>
     
     <section class="contato section" id="contato" >
-      <h2>Contato</h2>
+      <h2>Contato</h2>    
+      <!-- <div>
+        <a href="#home">
+          <img src="./img/Cafe_com_GP.jpg" alt="Café com PMO">
+        </a>
+      </div> -->
         <ul class="dados">
-          <li>Email: contato@cafe.com</li>
-          <li>Endereço: Rua do Café, nº 123, São Paulo - SP</li>
-          <li>Instagram: @Cafe_com_GP</li>
-          <li>Telefone: +55(11)9999-9999</li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            contato@cafe.com
+          </li>
+          <li>
+            <i class="fa-solid fa-location-dot"></i></i>
+            Rua do Café, nº 123, São Paulo - SP
+          </li>
+          <li>
+            <i class="fa-brands fa-instagram"></i>
+            Cafe_com_GP
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            +55(11)9999-9999
+          </li>
         </ul>
       </section>
     </main>
